@@ -1,0 +1,108 @@
+.SectionOne {
+  position: relative;
+  width: 100%;
+
+  .navWrapper {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .lines {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .content {
+    display: flex;
+    gap: 40px;
+    padding: 0 0 0 115px;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+
+    .heading {
+      font-weight: 700;
+      font-size: 62px;
+      line-height: 78px;
+      letter-spacing: -0.025em;
+      color: #3d3b52;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      span {
+        color: #ff9f1c;
+      }
+
+      button {
+        border: 3px solid #ff9f1c;
+        color: #ff9f1c;
+        width: 200px;
+        height: 60px;
+        background: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 28px;
+      }
+    }
+    .cover_img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.SectionOne::before,
+.SectionOne::after {
+  content: "WHO WE ARE";
+  position: absolute;
+  height: 140px;
+  bottom: -68px;
+  right: 0;
+  left: 0;
+  background: #ff9f1c;
+  transform: skewY(5deg);
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .SectionOne {
+    .lines {
+      gap: 280px;
+    }
+    .content {
+      padding: 0 0 0 40px;
+      top: 18%;
+      .heading {
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .SectionOne::before,
+  .SectionOne::after {
+    height: 100px;
+    bottom: -35px;
+    font-size: 26px;
+  }
+}
